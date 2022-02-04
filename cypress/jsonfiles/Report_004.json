@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-04T14:36:26.178Z",
+    "end": "2022-02-04T14:38:31.385Z",
+    "duration": 125207,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed50d0d6-111a-42d3-aecd-c19b6a37408c",
+      "title": "",
+      "fullFile": "cypress/integration/tests/placeorder.spec.js",
+      "file": "cypress/integration/tests/placeorder.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8ca1e494-e43b-41d0-abb2-2c768363d40e",
+          "title": "Place Order in Demo Site",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Placing Order",
+              "fullTitle": "Place Order in Demo Site Placing Order",
+              "timedOut": null,
+              "duration": 52417,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Loading Demo site, searching for a product and adding it to Cart\nhome.visit(_data.default.homeTitle);\nhome.productAddToCart(_data.default.productName);\nhome.getShoppingCart(); //Checking out as a Guest from Shopping cart\ncart.cartCheckout(_data.default.cartTitle, _data.default.productName);\ncart.getCheckoutAsGuest(_data.default.checkoutTitle); //Filling in Shipping details and proceesing\naddress.fillDetails(_data.default.userFirstname, _data.default.userLastname, _data.default.userPhoneNumber);\naddress.fillAddress(_data.default.userCountry, _data.default.userCity, _data.default.userAddress, _data.default.userPostcode);\naddress.getBillingSave(); //Continuing from the Payment page as a Can on Delivery Order\npayment.savePayment(); //Confirming and Placing the Order\nconfirm.getConfirmOrder();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `div.page-title 1`, but never found it. Queried from element: <body>",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `div.page-title 1`, but never found it. Queried from element: <body>\n    at confirmOrderPage.getConfirmOrder (https://frontend.nopcommerce.com/__cypress/tests?p=cypress\\integration\\tests\\placeorder.spec.js:173:17)\n    at Context.eval (https://frontend.nopcommerce.com/__cypress/tests?p=cypress\\integration\\tests\\placeorder.spec.js:459:13)",
+                "diff": null
+              },
+              "uuid": "50af46ad-d619-4637-84ea-79c83c489f04",
+              "parentUUID": "8ca1e494-e43b-41d0-abb2-2c768363d40e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "50af46ad-d619-4637-84ea-79c83c489f04"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52417,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "Report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/jsonfiles",
+        "json": true,
+        "reportFilename": "Report",
+        "overwrite": false,
+        "html": false,
+        "charts": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

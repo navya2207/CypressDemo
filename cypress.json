@@ -1,0 +1,22 @@
+{
+    "chromeWebSecurity": false ,
+    "failOnStatusCode": false,
+    "video":false,
+    "reporter":"mochawesome",
+    "reporterOptions":{
+        "reportDir": "cypress/jsonfiles",
+        "json" : true,
+        "reportFilename" : "Report",
+        "overwrite": false,
+        "html": false,
+        "charts": true
+    },
+
+    "defaultCommandTimeout": 5000,    
+    "baseUrl" : "https://frontend.nopcommerce.com/",
+    "retries": {
+        "runMode": 2,
+        "openMode": 1
+      },
+    "testFiles": ["**/*.spec.js"]    
+}

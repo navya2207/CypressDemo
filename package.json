@@ -1,0 +1,25 @@
+{
+  "name": "cypress-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "myrun": "node_modules\\.bin\\cypress run",
+    "order": "npm run myrun -- --browser chrome --spec cypress\\integration\\tests\\placeorder.spec.js",
+    "chrome": "npm run myrun -- --browser chrome --headed",  
+    "merge": "mochawesome-merge cypress\\JsonFiles\\*.json > combinedjsonreport.json",
+    "report": "marge --reportDir FinalReport combinedjsonreport.json",
+    "generate_mochawesomereport": "npm run merge && npm run report"
+    
+  },
+  "author": "Navya",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^9.4.1",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
+  }
+}
