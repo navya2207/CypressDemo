@@ -12,7 +12,7 @@
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) - Should be installed in the machine
-- Clone the repository : git clone https://github.com/navya2207/Cypress-Demo.git
+- Clone the repository : git clone https://github.com/navya2207/CypressDemo.git
 
 ### Installation 
 
