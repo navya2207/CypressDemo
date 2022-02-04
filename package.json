@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open",
-    "myrun": "node_modules\\.bin\\cypress run",
-    "order": "npm run myrun -- --browser chrome --spec cypress\\integration\\tests\\placeorder.spec.js",
+    "myrun": "node_modules\\.bin\\cypress run",    
     "chrome": "npm run myrun -- --browser chrome --headed",  
     "merge": "mochawesome-merge cypress\\JsonFiles\\*.json > combinedjsonreport.json",
     "report": "marge --reportDir FinalReport combinedjsonreport.json",
